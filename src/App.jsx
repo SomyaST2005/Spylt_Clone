@@ -14,11 +14,21 @@ import FooterSection from './sections/FooterSection'
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function App() {
-  useGSAP(() =>{
-    ScrollSmoother.create({
+  useGSAP(() => {
+    const smoother = ScrollSmoother.create({
       smooth: 3,
       effects: true,
     });
+
+    const handleLoad = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      smoother.kill();
+    };
   });
 
   return (
