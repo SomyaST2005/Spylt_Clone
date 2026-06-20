@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "ProximaNova";
+  font-family: "NovaRound", sans-serif;
   src: url("/fonts/NovaRound-Regular.ttf");
   font-display: swap;
 }
@@ -20,7 +20,7 @@
   --color-red: #a02128;
   --color-milk: #faeade;
   --font-sans: "Antonio", sans-serif;
-  --font-paragraph: "ProximaNova, sans-serif";
+  --font-paragraph: "NovaRound", sans-serif;
 }
 
 html,
@@ -32,7 +32,6 @@ body {
   color: #523122;
   font-family: "Antonio", sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
