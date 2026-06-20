@@ -15,6 +15,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function App() {
   useGSAP(() => {
+    document.fonts.ready.then(() => {
+      ScrollTrigger.refresh();
+    });
+
     const smoother = ScrollSmoother.create({
       smooth: 3,
       effects: true,
